@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/SmithOxenford/BOT-MAKANAKY-GAAA/issues"
   },
-  "license": "ISC",
+  "license": "ninguna",
   "dependencies": {
     "@adiwajshing/baileys": "^5.0.0",
     "@bochilteam/scraper": "^3.0.0",
