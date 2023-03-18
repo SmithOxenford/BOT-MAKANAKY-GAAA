@@ -7,21 +7,13 @@ import { en, es, pt } from './lib/idiomas/total-idiomas.js'
 
 //cambia los números que sean propietarios 
 global.owner = [
-  ['593959425714', '🔰 𝐃𝐈𝐄𝐆𝐎 - 𝐂𝐑𝐄𝐀𝐃𝐎𝐑 🔰', true],
-  ['51993138466', '🔰  𝐃𝐎𝐑𝐑𝐀𝐓∆𝐁𝐎𝐓 - 𝙲𝙾𝙻𝙻𝙰𝙱𝙾𝚁𝙰𝚃𝙾𝚁 1 🔰', true],
-  ['573184314110', '🔰 𝐃𝐎𝐑𝐑𝐀𝐓∆𝐁𝐎𝐓 - 𝙲𝙾𝙻𝙻𝙰𝙱𝙾𝚁𝙰𝚃𝙾𝚁 3 🔰', true],
-  ['50246028932', '🔰  𝐃𝐎𝐑𝐑𝐀𝐓∆𝐁𝐎𝐓 - 𝙲𝙾𝙻𝙻𝙰𝙱𝙾𝚁𝙰𝚃𝙾𝚁 4 🔰', true],
-  ['51936767238'],
-  ['593968585383'],
-  ['51957041866'],
-  ['584125778026'],
-  ['5219996125657'],
-  ['595986674310']
+  ['51986206184', '🔰 𝐀𝐃𝐑𝐈𝐀𝐍𝐎 - 𝐂𝐑𝐄𝐀𝐃𝐎𝐑 🔰', true],
+
 
 ] 
-global.suittag = ['593959425714'] 
-global.mods = ['595986674310'] 
-global.prems = [] 
+global.suittag = ['51986206184'] 
+global.mods = ['51986206184'] 
+global.prems = ['51986206184'] 
 
 global.APIs = { // API Prefix
   // name: 'https://website'
@@ -80,7 +72,7 @@ global.APIKeys = { // APIKey Here
 global.lenguajeGB = es
 
 /* ______________________________________________ */
-global.creadorname = '𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂'
+global.creadorname = '𝐒𝐦𝐢𝐭𝐡𝐎𝐱𝐞𝐧𝐟𝐨𝐫𝐝'
 global.creatorname = creadorname
 global.library = 'BAILEYS-MD'
 global.vs = 'V10'
@@ -98,16 +90,16 @@ global.tiempo = d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', 
 global.packname = `👑 ➢ CREADOR POR:\n📅 ➢ Día:\n🗓️ ➢ Fecha:`
 global.author = ` DORRAT-BOT\n• ${dia}\n• ${fecha}`
 //_______________
-global.wm = '𝑫𝑶𝑹𝑹𝑨𝑻-𝑩𝑶𝑻 | 𝑫𝑰𝑬𝑮𝑶-𝑶𝑭𝑪'
-global.db3t = `©⏤͟͟͞𝐓𝐇𝐄 𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃`
+global.wm = '𝑴𝑨𝑲𝑨𝑵𝑨𝑲𝒀-𝑩𝑶𝑻 | 𝑺𝒎𝒊𝒕𝒉𝑶𝒙𝒆𝒏𝒇𝒐𝒓𝒅'
+global.db3t = `𝐓𝐇𝐄 𝐌𝐀𝐊𝐀𝐍𝐀𝐊𝐘-𝐁𝐎𝐓-𝐆𝐀𝐀`
 global.wm3 = db3t
-global.igfg = '𝑫𝑶𝑹𝑹𝑨𝑻-𝑩𝑶𝑻'
+global.igfg = '𝑴𝑨𝑲𝑨𝑵𝑨𝑲𝒀-𝑩𝑶𝑻'
 global.wait = '*[❕] CARGANDO POR FAVOR ESPERA...*'
 //-------------------
-global.md = 'https://chat.whatsapp.com/JOkFXt2T0kNFN0vkiModTx'
+global.md = 'https://chat.whatsapp.com/'
 global.dorramd = md
 
-global.yt = 'http://youtube.com/@diegogameplays82'
+global.yt = 'http://youtube.com/'
 global.youtube = yt
 //Menu
 global.DorrafotoMenu = ['./galería/dorratmini.mp4']
@@ -119,7 +111,7 @@ global.fg = '☆━━━━ ⚠️ 𝙵𝙰𝙻𝙻𝙾 ⚠️ ━━━☆'
 global.fallo = fg
 global.mg = '══ ❎ 𝙻𝙾 𝚄𝚂𝙾 𝙼𝙰𝙻 ❎ ══'
 global.mal = mg
-global.dorre = 'DORRAT-BOT-MD'
+global.dorre = 'MAKANAKY-BOT-MD'
 global.DORRA = dorre
 
 /* Imagenes___________________ */
