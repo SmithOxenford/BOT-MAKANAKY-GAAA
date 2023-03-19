@@ -68,7 +68,7 @@ global.db.chain = chain(global.db.data)
 }
 loadDatabase()
 
-global.authFile = `Dorrat-BotSession`
+global.authFile = `Makanaky-BotSession`
 const { state, saveState, saveCreds } = await useMultiFileAuthState(global.authFile)
 const msgRetryCounterMap = MessageRetryMap => { }
 let { version } = await fetchLatestBaileysVersion();
@@ -83,7 +83,7 @@ getMessage: async (key) => ( opts.store.loadMessage(/** @type {string} */(key.re
 msgRetryCounterMap,
 logger: pino({ level: 'silent' }),
 auth: state,
-browser: ['Dorrat-Bot','Safari','9.7.0'],
+browser: ['Makanaky-Bot','Safari','9.7.0'],
 version   
 }
 

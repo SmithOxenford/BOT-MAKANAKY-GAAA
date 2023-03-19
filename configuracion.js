@@ -88,7 +88,7 @@ global.año = d.toLocaleDateString('es', { year: 'numeric' })
 global.tiempo = d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })
 //------------- Sticker WM -----------
 global.packname = `👑 ➢ CREADOR POR:\n📅 ➢ Día:\n🗓️ ➢ Fecha:`
-global.author = ` DORRAT-BOT\n• ${dia}\n• ${fecha}`
+global.author = `MAKANAKY-BOT\n• ${dia}\n• ${fecha}`
 //_______________
 global.wm = '𝑴𝑨𝑲𝑨𝑵𝑨𝑲𝒀-𝑩𝑶𝑻 | 𝑺𝒎𝒊𝒕𝒉𝑶𝒙𝒆𝒏𝒇𝒐𝒓𝒅'
 global.db3t = `𝐓𝐇𝐄 𝐌𝐀𝐊𝐀𝐍𝐀𝐊𝐘-𝐁𝐎𝐓-𝐆𝐀𝐀`
