@@ -210,7 +210,7 @@ let menu = `
 ┃🚀➺ _${usedPrefix}historia_
 ╰━━━━━━━━━━━━━━━━━━━⬣`.trim()
 
-conn.sendHydrated(m.chat, menu, wm, pp, 'https://github.com/SmithOxenford/MAKANAKY-BOT-GAAA', 'MAKANAKY-BOT-GAAA', null, null, [
+conn.sendHydrated(m.chat, menu, wm, pp, 'https://github.com/SmithOxenford/BOT-MAKANAKY-GAAA', 'BOT-MAKANAKY-GAAA', null, null, [
 
 ['𝙈𝙚𝙣𝙪́ 𝙘𝙤𝙢𝙥𝙡𝙚𝙩𝙤 | 𝙁𝙪𝙡𝙡 𝙈𝙚𝙣𝙪 💫', '.allmenu'],
 

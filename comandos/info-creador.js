@@ -21,8 +21,8 @@ let teksbio = `4
 
 ───────[ INFORMACIÓN DEL BOT ]───────
 
-✅ *NOMBRE: MAKANAKY-BOT-GAAA*
-🐈 *Github:* https://github.com/SmithOxenford/MAKANAKY-BOT-GAAA
+✅ *NOMBRE: BOT-MAKANAKY-GAAA*
+🐈 *Github:* https://github.com/SmithOxenford/BOT-MAKANAKY-GAAA
 🥏 *Whatsapp* wa.me/51986206184
 
 `

@@ -76,7 +76,7 @@ _- Al hacer uso de ciertos comandos que tengan como objetivo socavar la incomodi
 *dorrat-bot-oficial.ml*
 
 *ESTE ES EL REPOSITORIO OFICIAL*
-*https://github.com/SmithOxenford/MAKANAKY-BOT-GAAA*
+*https://github.com/SmithOxenford/BOT-MAKANAKY-GAAA*
 
 *CUENTA OFICIAL DE ASISTENCIA - WHATSAPP*
 ~ _Solo en esta Cuenta Respondo si tiene Dudas, Preguntas o Necesita Ayuda sobre MaknakyBot, También puede Comunicarse en Caso de Temas de Colaboración_

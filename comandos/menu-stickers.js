@@ -164,7 +164,7 @@ let str = `
 ├➢🌠 _${usedPrefix}stickerfilter *<efecto> <responder a imagen>*_ 
 └────ׂ─ׂ─ׂ─ׂ───`.trim()
 
-conn.sendHydrated2(m.chat, str, wm, pp, 'https://www.paypal.me/TheShadowBrokers133', '𝙿𝙰𝚈𝙿𝙰𝙻', 'https://github.com/SmithOxenford/MAKANAKY-BOT-GAAA', '𝙶𝙸𝚃𝙷𝚄𝙱', [
+conn.sendHydrated2(m.chat, str, wm, pp, 'https://www.paypal.me/TheShadowBrokers133', '𝙿𝙰𝚈𝙿𝙰𝙻', 'https://github.com/SmithOxenford/BOT-MAKANAKY-GAAA', '𝙶𝙸𝚃𝙷𝚄𝙱', [
 
 ['💎 𝙶𝚁𝚄𝙿𝙾𝚂 𝙾𝙵𝙸𝙲𝙸𝙰𝙻𝙴𝚂 💎', '/grupos'],
 

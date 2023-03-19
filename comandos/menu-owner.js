@@ -169,7 +169,7 @@ let str = `
 ❀••►☪︎ _${usedPrefix}delprem *<@tag>*_
 ❀••►☪︎ _${usedPrefix}listprem_
 𒅄 ▬▬▬▬ ◆ ▬▬▬▬ 𒅄`.trim()
-conn.sendHydrated(m.chat, str, wm, pp, 'https://github.com/SmithOxenford/MAKANAKY-BOT-GAAA', '📎𝙶𝙸𝚃𝙷𝚄𝙱', null, null, [
+conn.sendHydrated(m.chat, str, wm, pp, 'https://github.com/SmithOxenford/BOT-MAKANAKY-GAAA', '📎𝙶𝙸𝚃𝙷𝚄𝙱', null, null, [
 
 ['𝐌𝐄𝐍𝐔', '/menu'],
 

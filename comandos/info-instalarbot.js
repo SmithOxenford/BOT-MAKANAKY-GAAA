@@ -11,8 +11,8 @@ let text = `
 > pkg install ffmpeg -y
 > pkg install imagemagick -y
 > pkg install yarn
-> git clone https://github.com/SmithOxenford/MAKANAKY-BOT-GAAA
-> cd MAKANAKY-BOT-GAAA
+> git clone https://github.com/SmithOxenford/BOT-MAKANAKY-GAAA
+> cd BOT-MAKANAKY-GAAA
 > yarn install 
 > npm install
 > npm update

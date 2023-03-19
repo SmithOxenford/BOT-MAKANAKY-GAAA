@@ -16,7 +16,7 @@ return `*◦ Paquete:* ${pkg.name || '-'}
 *💳 Gmail:* ${pkg.publisher.email || '-'}
 *🖊️ HomePage:* ${pkg.links.homepage || '-'} `
 	}).join`\n\n`
- conn.sendHydrated(m.chat, txt2, wm3, bg, 'https://github.com/SmithOxenford/MAKANAKY-BOT-GAAA', 'Github', null, null, [[``,``]], m)
+ conn.sendHydrated(m.chat, txt2, wm3, bg, 'https://github.com/SmithOxenford/BOT-MAKANAKY-GAAA', 'Github', null, null, [[``,``]], m)
 }
 
 handler.command = /(npmsh)/i 
