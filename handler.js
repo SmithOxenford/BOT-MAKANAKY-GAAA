@@ -1,10 +1,9 @@
-import { generateWAMessageFromContent } from "@adiwajshing/baileys"
 import { smsg } from './lib/simple.js'
 import { format } from 'util'
 import { fileURLToPath } from 'url'
 import path, { join } from 'path'
 import { unwatchFile, watchFile } from 'fs'
-import chalk from 'chalk' 
+import chalk from 'chalk'  
 
 /**
  * @type {import('@adiwajshing/baileys')}  
@@ -34,9 +33,8 @@ export async function handler(chatUpdate) {
         m = smsg(this, m) || m
         if (!m)
             return
-        m.tarjeta = false
         m.exp = 0
-        m.dolares = false
+        m.dorracoins = false
         m.bitcoins = false
         m.limit = false
         try {
@@ -50,25 +48,14 @@ export async function handler(chatUpdate) {
 		if (!('premium' in user)) user.premium = false
 		if (!isNumber(user.joincount)) user.joincount = 2
                 if (!isNumber(user.bitcoins)) user.bitcoins = 10
-                if (!isNumber(user.dolares)) user.dolares = 20   
- 	        if (!isNumber(user.tarjeta)) user.tarjeta = 1
+                if (!isNumber(user.dorracoins)) user.dorracoins = 20    	    
                 if (!isNumber(user.limit)) user.limit = 20    	       
                 if (!('registered' in user)) user.registered = false
-		if (!('registroR' in user)) user.registroR = false
-		if (!('registroC' in user)) user.registroC = false    
-                     
+                    
             if (!user.registered) {
 		                    	 
 		    if (!('name' in user)) user.name = m.name
-                    if (!isNumber(user.age)) user.age = 0
-		    if (!isNumber(user.genero)) user.genero = 0
-		    if (!isNumber(user.identidad)) user.identidad = 0
-		    if (!isNumber(user.pasatiempo)) user.pasatiempo = 0
-		    if (!isNumber(user.pas1)) user.pas1 = 0
-		    if (!isNumber(user.pas2)) user.pas2 = 0
-		    if (!isNumber(user.pas3)) user.pas3 = 0
-		    if (!isNumber(user.pas4)) user.pas4 = 0
-		    if (!isNumber(user.pas5)) user.pas5 = 0
+                    if (!isNumber(user.age)) user.age = -1
                     if (!isNumber(user.anggur)) user.anggur = 0
                     if (!isNumber(user.apel)) user.apel = 0
                     if (!isNumber(user.bibitanggur)) user.bibitanggur = 0
@@ -355,12 +342,11 @@ export async function handler(chatUpdate) {
               if (!isNumber(user.lelebakar)) user.lelebakar = 0
               if (!isNumber(user.leleg)) user.leleg = 0
               if (!isNumber(user.level)) user.level = 0
-              if (!isNumber(user.tarjeta)) user.tarjeta = 1
-              if (!isNumber(user.dolares)) user.dolares = 20
+              if (!isNumber(user.dorracoins)) user.dorracoins = 20
               if (!isNumber(user.bitcoins)) user.bitcoins = 10
               if (!isNumber(user.limit)) user.limit = 20
               if (!isNumber(user.limitjoinfree)) user.limitjoinfree = 1
-              if (!isNumber(user.dolaresjoinfree)) user.dolaresjoinfree = 1
+              if (!isNumber(user.dorracoinsjoinfree)) user.dorracoinsjoinfree = 1
               if (!isNumber(user.lion)) user.lion = 0
               if (!isNumber(user.lionexp)) user.lionexp = 0
               if (!isNumber(user.lionlastfeed)) user.lionlastfeed = 0
@@ -506,16 +492,8 @@ export async function handler(chatUpdate) {
             global.db.data.users[m.sender] = {
 		    
 		    afk: -1,
-                    afkReason: '',                    
-                    age: 0,
-		    genero: 0,
-		    identidad: 0,
-		    pasatiempo: 0,
-		    pas1: 0,
-		    pas2: 0,
-		    pas3: 0,
-	            pas4: 0,
-		    pas5: 0,
+                    afkReason: '',
+                    age: -1,
                     agility: 16,
                     anakanjing: 0,
                     anakcentaur: 0,
@@ -653,7 +631,7 @@ export async function handler(chatUpdate) {
                     jeruk: 0,
                     job: 'Pengangguran',
 		    joincount: 2,
-                    joindolares: 1,
+                    Joindorracoins: 1,
                     joinlimit: 1,
                     judilast: 0,
                     kaleng: 0,
@@ -773,13 +751,12 @@ export async function handler(chatUpdate) {
                     leleb: 0,
                     lelebakar: 0,
                     leleg: 0,
-                    level: 0, 
-                    tarjeta: 1,
+                    level: 0,
                     bitcoins: 10,
-                    dolares: 20,
+                    dorracoins: 20,
                     limit: 20,
                     limitjoinfree: 1,
-                    dolaresjoinfree: 1,
+                    dorracoinsjoinfree: 1,
                     lion: 0,
                     lionexp: 0,
                     lionlastfeed: 0,
@@ -1206,18 +1183,14 @@ export async function handler(chatUpdate) {
                     m.reply('Ngecit -_-') // Hehehe
                 else
                     m.exp += xp
-                if (isPrems && comandos.limit && global.db.data.users[m.sender].limit < comandos.limit * 1) {
+                if (!isPrems && comandos.limit && global.db.data.users[m.sender].limit < comandos.limit * 1) {
                     this.reply(m.chat, `${ag}\n𝙉𝙊 𝙏𝙄𝙀𝙉𝙀 𝘿𝙄𝘼𝙈𝘼𝙉𝙏𝙀𝙎. 💎 𝙋𝙐𝙀𝘿𝙀 𝘾𝙊𝙈𝙋𝙍𝘼𝙍 𝘾𝙊𝙉 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}buy*\n\n𝙄𝙏 𝙃𝘼𝙎 𝙉𝙊 𝘿𝙄𝘼𝙈𝙊𝙉𝘿𝙎. 💎 𝙔𝙊𝙐 𝘾𝘼𝙉 𝘽𝙐𝙔 𝙒𝙄𝙏𝙃 𝙏𝙃𝙀 𝘾𝙊𝙈𝙈𝘼𝙉𝘿 *${usedPrefix}buy*`, m)
                     continue // Limit habis
                 }
-if (!isPrems && comandos.dolares && global.db.data.users[m.sender].dolares < comandos.dolares * 1) {
-                    this.reply(m.chat, `${ag}\n*No tiene dólares* 💵\n\n*puede conseguir 💵 con el comando #trabajar o comprando con #buy dolares [cantidad]*`, m)
-                    continue 
+if (!isPrems && comandos.dorracoins && global.db.data.users[m.sender].dorracoins < comandos.dorracoins * 1) {
+                    this.reply(m.chat, `${ag}\n\n*NO TIENE DORRATCOINS* 🪙\n\n *puede conseguir dorratcoins con el comando #minarcoins o comprando con #buy dorracoins [cantidad]*`, m)
+                    continue // Limit habis
 
-}
-if (!isPrems && comandos.bitcoins && global.db.data.users[m.sender].bitcoins < comandos.bitcoins * 1) {
-                    this.reply(m.chat, `${ag}\n\n*No tiene bitcoins* 🏵️\n\n *puede conseguir Bitcoins 🏵️ comprando con #buy bitcoins [cantidad]*`, m)
-                    continue 
 }
                 if (comandos.level > _user.level) {
                     this.reply(m.chat, `𝙉𝙀𝘾𝙀𝙎𝙄𝙏𝘼 𝙀𝙇 𝙉𝙄𝙑𝙀𝙇 ➡️ *${comandos.level}* 𝙋𝘼𝙍𝘼 𝙋𝙊𝘿𝙀𝙍 𝙐𝙎𝘼𝙍 𝙀𝙎𝙏𝙀 𝘾𝙊𝙈𝘼𝙉𝘿𝙊. 𝙏𝙐 𝙉𝙄𝙑𝙀𝙇 𝙀𝙎 ➡️ *${_user.level}* 𝘼𝘾𝙏𝙐𝘼𝙇𝙄𝙕𝘼 𝙏𝙐 𝙉𝙄𝙑𝙀𝙇 𝘾𝙊𝙉 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}nivel*\n\n𝙈𝙐𝙎𝙏 𝙍𝙀𝘼𝘾𝙃 𝙏𝙃𝙀 𝙇𝙀𝙑𝙀𝙇 #️⃣ *${comandos.level}* 𝙏𝙊 𝘽𝙀 𝘼𝘽𝙇𝙀 𝙏𝙊 𝙐𝙎𝙀 𝙏𝙃𝙄𝙎 𝘾𝙊𝙈𝙈𝘼𝙉𝘿. 𝙔𝙊𝙐𝙍 𝙇𝙀𝙑𝙀𝙇 𝙄𝙎 #️⃣ *${_user.level}* 𝙐𝙋𝘿𝘼𝙏𝙀 𝙒𝙄𝙏𝙃 𝘾𝙊𝙈𝙈𝘼𝙉𝘿 *${usedPrefix}level*`, m)
@@ -1250,7 +1223,7 @@ if (!isPrems && comandos.bitcoins && global.db.data.users[m.sender].bitcoins < c
                     await comandos.call(this, m, extra)
                     if (!isPrems)
                         m.limit = m.limit || comandos.limit || false
-                        m.dolares = m.dolares || comandos.dolares || false
+                        m.dorracoins = m.dorracoins || comandos.dorracoins || false
                 } catch (e) {
                     // Error occured
                     m.error = e
@@ -1278,10 +1251,8 @@ if (!isPrems && comandos.bitcoins && global.db.data.users[m.sender].bitcoins < c
                     }
                     if (m.limit)
                         m.reply(+m.limit + ' 𝘿𝙄𝘼𝙈𝘼𝙉𝙏𝙀(𝙎) 💎 𝙐𝙎𝘼𝘿𝙊(𝙎)')
-                    if (m.bitcoins)
-                        m.reply(+m.bitcoins + ' Bitcoins  🏵️ Usados')
-                 if (m.dolares)
-                        m.reply(+m.dolares + ' DOLARES 💵 USADOS')
+                 if (m.dorracoins)
+                        m.reply(+m.dorracoins + ' 𝘿𝙊𝙍𝙍𝘼𝙏𝘾𝙊𝙄𝙉𝙎 🪙 𝙐𝙎𝘼𝘿𝙊(𝙎)')
               
                 }
                 break
@@ -1301,8 +1272,7 @@ if (!isPrems && comandos.bitcoins && global.db.data.users[m.sender].bitcoins < c
             if (m.sender && (user = global.db.data.users[m.sender])) {
                 user.exp += m.exp
                 user.limit -= m.limit * 1
-                user.dolares -= m.dolares * 1
-                user.bitcoins -= m.bitcoins * 1
+                user.dorracoins -= m.dorracoins * 1
             }
 
             let stat
@@ -1387,7 +1357,7 @@ export async function participantsUpdate({ id, participants, action }) {
                 }
             }
             break   
-        /*case 'promote':
+        case 'promote':
         case 'daradmin':
         case 'darpoder':
             text = (chat.sPromote || this.spromote || conn.spromote || '@user ```is now Admin```')
@@ -1399,7 +1369,7 @@ export async function participantsUpdate({ id, participants, action }) {
             text = text.replace('@user', '@' + participants[0].split('@')[0])
             if (chat.detect)
                 this.sendMessage(id, { text, mentions: this.parseMention(text) })
-            break*/
+            break
     }
 }
 
@@ -1416,7 +1386,7 @@ export async function groupsUpdate(groupsUpdate) {
         let chats = global.db.data.chats[id], text = ''
         if (!chats?.detect) continue
         if (groupUpdate.desc) text = (chats.sDesc || this.sDesc || conn.sDesc || '```Description has been changed to```\n@desc').replace('@desc', groupUpdate.desc)
-        //if (groupUpdate.subject) text = (chats.sSubject || this.sSubject || conn.sSubject || '```Subject has been changed to```\n@subject').replace('@subject', groupUpdate.subject)
+        if (groupUpdate.subject) text = (chats.sSubject || this.sSubject || conn.sSubject || '```Subject has been changed to```\n@subject').replace('@subject', groupUpdate.subject)
         if (groupUpdate.icon) text = (chats.sIcon || this.sIcon || conn.sIcon || '```Icon has been changed to```').replace('@icon', groupUpdate.icon)
         if (groupUpdate.revoke) text = (chats.sRevoke || this.sRevoke || conn.sRevoke || '```Group link has been changed to```\n@revoke').replace('@revoke', groupUpdate.revoke)
         if (!text) continue
@@ -1458,10 +1428,10 @@ this.copyNForward(msg.chat, msg).catch(e => console.log(e, msg))
 } catch (e) {
 console.error(e)
 }}
-global.zds = ['VeyaaGG']
+
 global.dfail = (type, m, conn) => {
     let msg = {
-        rowner: '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝚂𝙾𝙻𝙾 𝙿𝚄𝙴𝙳𝙴 𝚂𝙴𝚁 𝚄𝚃𝙸𝙻𝙸𝚉𝙰𝙳𝙾 𝙿𝙾𝚁 𝙴𝙻/𝙻𝙰 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾/𝙰 (𝙾𝚆𝙽𝙴𝚁) 𝙳𝙴𝙻 𝙱𝙾𝚃*',
+    rowner: '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝚂𝙾𝙻𝙾 𝙿𝚄𝙴𝙳𝙴 𝚂𝙴𝚁 𝚄𝚃𝙸𝙻𝙸𝚉𝙰𝙳𝙾 𝙿𝙾𝚁 𝙴𝙻/𝙻𝙰 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾/𝙰 (𝙾𝚆𝙽𝙴𝚁) 𝙳𝙴𝙻 𝙱𝙾𝚃*',
         owner: '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝚂𝙾𝙻𝙾 𝙿𝚄𝙴𝙳𝙴 𝚂𝙴𝚁 𝚄𝚃𝙸𝙻𝙸𝚉𝙰𝙳𝙾 𝙿𝙾𝚁 𝙴𝙻/𝙻𝙰 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾/𝙰 (𝙾𝚆𝙽𝙴𝚁) 𝙳𝙴𝙻 𝙱𝙾𝚃*',
         mods: '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝚂𝙾𝙻𝙾 𝙿𝚄𝙴𝙳𝙴 𝚂𝙴𝚁 𝚄𝚃𝙸𝙻𝙸𝚉𝙰𝙳𝙾 𝙿𝙾𝚁 𝙼𝙾𝙳𝙴𝚁𝙰𝙳𝙾𝚁𝙴𝚂 𝚈 𝙴𝙻/𝙻𝙰 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾/𝙰 (𝙾𝚆𝙽𝙴𝚁) 𝙳𝙴𝙻 𝙱𝙾𝚃*',
         premium: '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝚂𝙾𝙻𝙾 𝙿𝚄𝙴𝙳𝙴 𝚂𝙴𝚁 𝚄𝚃𝙸𝙻𝙸𝚉𝙰𝙳𝙾 𝙿𝙾𝚁 𝚄𝚂𝚄𝙰𝚁𝙸𝙾𝚂 𝙿𝚁𝙴𝙼𝙸𝚄𝙼 𝚈 𝙴𝙻/𝙻𝙰 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾/𝙰 (𝙾𝚆𝙽𝙴𝚁) 𝙳𝙴𝙻 𝙱𝙾𝚃*',
@@ -1470,17 +1440,11 @@ global.dfail = (type, m, conn) => {
         admin: '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝚂𝙾𝙻𝙾 𝙿𝚄𝙴𝙳𝙴 𝚂𝙴𝚁 𝚄𝚃𝙸𝙻𝙸𝚉𝙰𝙳𝙾 𝙿𝙾𝚁 𝙰𝙳𝙼𝙸𝙽𝚂 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾*',
         botAdmin: '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] 𝙿𝙰𝚁𝙰 𝙿𝙾𝙳𝙴𝚁 𝚄𝚂𝙰𝚁 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙴𝚂 𝙽𝙴𝙲𝙴𝚂𝙰𝚁𝙸𝙾 𝚀𝚄𝙴 𝙴𝙻 𝙱𝙾𝚃 𝚂𝙴𝙰 𝙰𝙳𝙼𝙸𝙽, 𝙰𝙲𝙴𝙽𝙳𝙴𝚁 𝙰 𝙰𝙳𝙼𝙸𝙽 𝙴𝚂𝚃𝙴 𝙽𝚄𝙼𝙴𝚁𝙾*',
         unreg: '*[ ❎ 𝐇𝐄𝐘!! 𝐀𝐋𝐓𝐎, 𝐍𝐎 𝐄𝐒𝐓𝐀𝐒 𝐑𝐄𝐆𝐈𝐒𝐓𝐑𝐀𝐃𝐎 ❎ ]*\n\n*—◉ 𝙿𝙰𝚁𝙰 𝚄𝚂𝙰𝚁 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙳𝙴𝙱𝙴𝚂 𝚁𝙴𝙶𝙸𝚂𝚃𝚁𝙰𝚁𝚃𝙴, 𝚄𝚂𝙰 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾*\n*➣ #verificar*',
-        restrict: '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙴𝚂𝚃𝙰 𝚁𝙴𝚂𝚃𝚁𝙸𝙽𝙶𝙸𝙳𝙾/𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰𝙳𝙾 𝙿𝙾𝚁 𝙳𝙴𝚂𝙸𝙲𝙸𝙾𝙽 𝙳𝙴𝙻 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾/𝙰 (𝙾𝚆𝙽𝙴𝚁) 𝙳𝙴𝙻 𝙱𝙾𝚃*'
+        restrict: '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] ESTE COMANDO ESTA RESTRINGIDO/DESACTIVADO POR DESICIÓN DE EL/LA PROPIETARIO/A (OWNER) DEL BOT*'      
+
     }[type]
-    let aa = { quoted: m, userJid: conn.user.jid }
-    let prep = generateWAMessageFromContent(m.chat, { extendedTextMessage: { text: msg, contextInfo: { externalAdReply: { title: '[ ⚠ ] 𝐀𝐕𝐈𝐒𝐎 - 𝐀𝐋𝐄𝐑𝐓𝐀', body: '𝙳𝚘𝚛𝚛𝚊𝚝-𝙱𝚘𝚝-𝙼𝙳', thumbnail: imagen1, sourceUrl: 'https://github.com/DIEGO-OFC/DORRAT-BOT-MD' }}}}, aa)
-    if (msg) return conn.relayMessage(m.chat, prep.message, { messageId: prep.key.id })
-    //if (msg) return m.reply(msg)
+    if (msg) return m.reply(msg) 
 }
-
-
-
-
 
 let file = global.__filename(import.meta.url, true)
 watchFile(file, async () => {
@@ -1488,4 +1452,3 @@ watchFile(file, async () => {
     console.log(chalk.redBright("Update 'handler.js'"))
     if (global.reloadHandler) console.log(await global.reloadHandler())
 })
-global.listkatakotor = /k(o?a)ngk(o?a)ng|yat(e?i)m|ancrit|bokep|anj(k|g)|sundala|ajn?(g|k)|a?njin(g|k)|bajingan|cabul|lonte|b(a?n)?gsa?t|ko?nto?l|me?me?(k|q)|pe?pe?(k|q)|meki|titi(t|d)|pe?ler|tetek|toket|ngewe|go?blo?k|to?lo?l|idiot|(k|ng)e?nto?(t|d)|jembut|bego|dajj?al|janc(u|o)k|pantek|puki ?(mak)?|kimak|kampang|lonte|col(i|mek?)|pelacur|henceu?t|nigga|fuck|dick|bitch|tits|bastard|gay|lesbi|asshole/g

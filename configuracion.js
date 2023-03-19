@@ -8,12 +8,20 @@ import { en, es, pt } from './lib/idiomas/total-idiomas.js'
 //cambia los números que sean propietarios 
 global.owner = [
   ['51986206184', '🔰 𝐀𝐃𝐑𝐈𝐀𝐍𝐎 - 𝐂𝐑𝐄𝐀𝐃𝐎𝐑 🔰', true],
-
+  ['51986206184', '🔰  𝐌𝐀𝐊𝐀𝐍𝐀𝐊𝐘𝐁𝐎𝐓 - 𝙲𝙾𝙻𝙻𝙰𝙱𝙾𝚁𝙰𝚃𝙾𝚁 1 🔰', true],
+  ['51986206184', '🔰 𝐌𝐀𝐊𝐀𝐍𝐀𝐊𝐘𝐁𝐎𝐓 - 𝙲𝙾𝙻𝙻𝙰𝙱𝙾𝚁𝙰𝚃𝙾𝚁 3 🔰', true],
+  ['51986206184', '🔰  𝐌𝐀𝐊𝐀𝐍𝐀𝐊𝐘𝐁𝐎𝐓 - 𝙲𝙾𝙻𝙻𝙰𝙱𝙾𝚁𝙰𝚃𝙾𝚁 4 🔰', true],
+  ['51986206184'],
+  ['51986206184'],
+  ['51986206184'],
+  ['51986206184'],
+  ['51986206184'],
+  ['51986206184']
 
 ] 
 global.suittag = ['51986206184'] 
 global.mods = ['51986206184'] 
-global.prems = ['51986206184'] 
+global.prems = [] 
 
 global.APIs = { // API Prefix
   // name: 'https://website'
@@ -88,15 +96,15 @@ global.año = d.toLocaleDateString('es', { year: 'numeric' })
 global.tiempo = d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })
 //------------- Sticker WM -----------
 global.packname = `👑 ➢ CREADOR POR:\n📅 ➢ Día:\n🗓️ ➢ Fecha:`
-global.author = `MAKANAKY-BOT\n• ${dia}\n• ${fecha}`
+global.author = ` MAKANAKY-BOT\n• ${dia}\n• ${fecha}`
 //_______________
-global.wm = '𝑴𝑨𝑲𝑨𝑵𝑨𝑲𝒀-𝑩𝑶𝑻 | 𝑺𝒎𝒊𝒕𝒉𝑶𝒙𝒆𝒏𝒇𝒐𝒓𝒅'
-global.db3t = `𝐓𝐇𝐄 𝐌𝐀𝐊𝐀𝐍𝐀𝐊𝐘-𝐁𝐎𝐓-𝐆𝐀𝐀`
+global.wm = '𝑴𝑨𝑲𝑨𝑵𝑨𝑲𝒀-𝑩𝑶𝑻 | 𝑫𝑰𝑬𝑮𝑶-𝑶𝑭𝑪'
+global.db3t = `𝐓𝐇𝐄-𝐁𝐎𝐓-𝐌𝐀𝐊𝐀𝐍𝐀𝐊𝐘-𝐆𝐀𝐀𝐀`
 global.wm3 = db3t
 global.igfg = '𝑴𝑨𝑲𝑨𝑵𝑨𝑲𝒀-𝑩𝑶𝑻'
 global.wait = '*[❕] CARGANDO POR FAVOR ESPERA...*'
 //-------------------
-global.md = 'https://chat.whatsapp.com/'
+global.md = 'https://chat.whatsapp.com/JOkFXt2T0kNFN0vkiModTx'
 global.dorramd = md
 
 global.yt = 'http://youtube.com/'
@@ -111,7 +119,7 @@ global.fg = '☆━━━━ ⚠️ 𝙵𝙰𝙻𝙻𝙾 ⚠️ ━━━☆'
 global.fallo = fg
 global.mg = '══ ❎ 𝙻𝙾 𝚄𝚂𝙾 𝙼𝙰𝙻 ❎ ══'
 global.mal = mg
-global.dorre = 'MAKANAKY-BOT-MD'
+global.dorre = 'DORRAT-BOT-MD'
 global.DORRA = dorre
 
 /* Imagenes___________________ */
